@@ -41,19 +41,46 @@ export default function Sidebar(props) {
                         <h1 className="hidden sm:hidden md:block">Admin</h1>
                     </div>
                 </Link>
-
-                <Link className="w-auto sm:w-full" href="gejala">
+                <Link className="w-auto sm:w-full" href="hama">
                     <div
                         className={`flex ${
-                            props.active == "Gejala"
-                                ? "bg-blue-600 border-blue-900  text-white font-bold"
+                            props.active == "Hama"
+                                ? "bg-blue-600 border-blue-900 text-white font-bold"
                                 : "bg-white text-gray-500 border-white hover:bg-gray-100 hover:border-gray-300"
                         }  space-x-3 p-3 rounded-md border-l-8 transition-all duration-300 w-full`}
                     >
-                        <FaIcons.FaUserMd size={24} className="" />
-                        <h1 className="hidden sm:hidden md:block">Gejala</h1>
+                        <FaIcons.FaChartLine size={24} className="" />
+                        <h1 className="hidden sm:hidden md:block">Hama</h1>
                     </div>
                 </Link>
+                <Link className="w-auto sm:w-full" href="gejalahama">
+                    <div
+                        className={`flex ${props.active == "Gejala Hama"
+                                ? "bg-blue-600 border-blue-900  text-white font-bold"
+                                : "bg-white text-gray-500 border-white hover:bg-gray-100 hover:border-gray-300"
+                            }  space-x-3 p-3 rounded-md border-l-8 transition-all duration-300 w-full`}
+                    >
+                        <FaIcons.FaUserMd size={24} className="" />
+                        <h1 className="hidden sm:hidden md:block">Gejala Hama</h1>
+                    </div>
+                </Link>
+                <Link className="w-auto sm:w-full" href="pengetahuanhama">
+                    <div
+                        className={`flex ${props.active == "Pengetahuan Hama"
+                                ? "bg-blue-600 border-blue-900 text-white font-bold"
+                                : "bg-white text-gray-500 border-white hover:bg-gray-100 hover:border-gray-300"
+                            }  space-x-3 p-3 rounded-md border-l-8 transition-all duration-300 w-full`}
+                    >
+                        <FaIcons.FaChartLine size={24} className="" />
+                        <h1 className="hidden sm:hidden md:block">
+                            Pengetahuan Hama
+                        </h1>
+                    </div>
+                </Link>
+                <Link className="w-auto sm:w-full" href="pengetahuanhama">
+                   
+                </Link>
+                
                 <Link className="w-auto sm:w-full" href="penyakit">
                     <div
                         className={`flex ${
@@ -64,6 +91,17 @@ export default function Sidebar(props) {
                     >
                         <FaIcons.FaChartLine size={24} className="" />
                         <h1 className="hidden sm:hidden md:block">Penyakit</h1>
+                    </div>
+                </Link>
+                <Link className="w-auto sm:w-full" href="gejala">
+                    <div
+                        className={`flex ${props.active == "Gejala"
+                                ? "bg-blue-600 border-blue-900  text-white font-bold"
+                                : "bg-white text-gray-500 border-white hover:bg-gray-100 hover:border-gray-300"
+                            }  space-x-3 p-3 rounded-md border-l-8 transition-all duration-300 w-full`}
+                    >
+                        <FaIcons.FaUserMd size={24} className="" />
+                        <h1 className="hidden sm:hidden md:block">Gejala</h1>
                     </div>
                 </Link>
                 <Link className="w-auto sm:w-full" href="pengetahuan">

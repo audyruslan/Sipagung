@@ -9,8 +9,5 @@ class Pengetahuan extends Model
 {
     use HasFactory;
 
-     public function gejala()
-    {
-        return $this->belongsTo(Gejala::class);
-    }
+
 }

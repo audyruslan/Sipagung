@@ -4,6 +4,8 @@ use App\Http\Controllers\Admin\ActivityController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\DoctorsController;
 use App\Http\Controllers\Admin\GejalaController;
+use App\Http\Controllers\Admin\GejalaHamaContoller;
+use App\Http\Controllers\Admin\HamaController;
 use App\Http\Controllers\Admin\PatientsController;
 use App\Http\Controllers\Admin\PengetahuanController;
 use App\Http\Controllers\Admin\PenyakitController;
@@ -11,6 +13,7 @@ use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\Admin\SettingsController;
 use App\Http\Controllers\LoginController;
+use App\Models\PengetahuanHama;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -55,7 +58,25 @@ Route::middleware('auth')->group(function () {
         Route::post('/gejala-update', [GejalaController::class, 'update']);
         Route::post('/gejala-delete', [GejalaController::class, 'delete']);
 
-        // Gejala
+        // Hama
+        Route::get('/hama', [HamaController::class, 'index']);
+        Route::post('/hama', [HamaController::class, 'insert']);
+        Route::post('/hama-update', [HamaController::class, 'update']);
+        Route::post('/hama-delete', [HamaController::class, 'delete']);
+
+        // Gejala Hama
+        Route::get('/gejalahama', [GejalaHamaContoller::class, 'index']);
+        Route::post('/gejalahama', [GejalaHamaContoller::class, 'insert']);
+        Route::post('/gejalahama-update', [GejalaHamaContoller::class, 'update']);
+        Route::post('/gejalahama-delete', [GejalaHamaContoller::class, 'delete']);
+        
+        // Pengetahuan Hama
+        Route::get('/pengetahuanhama', [PengetahuanHama::class, 'index']);
+        Route::post('/pengetahuanhama', [PengetahuanHama::class, 'insert']);
+        Route::post('/pengetahuanhama-update', [PengetahuanHama::class, 'update']);
+        Route::post('/pengetahuanhama-delete', [PengetahuanHama::class, 'delete']);
+        
+        // Penyakit
         Route::get('/penyakit', [PenyakitController::class, 'index']);
         Route::post('/penyakit', [PenyakitController::class, 'insert']);
         Route::post('/penyakit-update', [PenyakitController::class, 'update']);
