@@ -24,6 +24,12 @@ class HamaController extends Controller
             'gambar' => 'required'
             ]);
 
+            if ($request->hasFile('gambar')) {
+                  $images = $request->file('gambar');
+                  $extention = $images->getClientOriginalExtension();
+                  $imageName = time() . '.' . $extention;
+                  $images->move(public_path('img/hama/'), $imageName);
+            }   
             Hama::create([
             'nama_hama' => $request->nama_hama,
             'det_hama' => $request->det_hama,

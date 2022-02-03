@@ -6,18 +6,18 @@ import { modalData, modalToggle } from "../../Store/Modal";
 import PengetahuanTable from "../../Components/PengetahuanHama/PengetahuanTable";
 import PengetahuanForm from "../../Components/PengetahuanHama/PengetahuanForm";
 
-export default function Pengetahuan(props) {
+export default function Pengetahuan(props) { 
     const [showModal, setShowModal] = useRecoilState(modalToggle);
     const [dataEdit, setDataEdit] = useRecoilState(modalData);
-    const PengetahuansData = props.pengetahuanhama.data;
-    const PenyakitsData = props.hama.data;
-    const GejalasData = props.gejalahama.data;
+    const PengetahuanHamasData = props.pengetahuanhama.data;
+    const HamasData = props.hama.data;
+    const GejalaHamasData = props.gejalahama.data;
 
     return (
         <Admin judul="Pengetahuan Hama">
             <PengetahuanForm 
-                penyakitsData={PenyakitsData} 
-                gejalasData={GejalasData} />
+                hamasData={HamasData} 
+                gejalaHamasData={GejalaHamasData} />
             <div className="p-4 space-y-3">
                 <button
                     onClick={() => {
@@ -31,7 +31,7 @@ export default function Pengetahuan(props) {
                     <MdIcons.MdAddCircle size={16} />
                     <h1>Tambah</h1>
                 </button>
-                <PengetahuanTable pengetahuansData={PengetahuansData} />
+                <PengetahuanTable pengetahuanHamasData={PengetahuanHamasData} />
             </div>
         </Admin>
     );

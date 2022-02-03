@@ -12,7 +12,7 @@ class PengetahuanHamaContoller extends Controller
     public function index()
       {
             return inertia('Admin/PengetahuanHama', [
-            'pengetahuanhama' => PengetahuanHama::all(),
+            'pengetahuanhama' => PengetahuanHama::paginate(10),
             'hama' => Hama::paginate(10),
             'gejalahama' => GejalaHama::paginate(10)
             ]);
@@ -21,15 +21,15 @@ class PengetahuanHamaContoller extends Controller
       public function insert(Request $request)
       {
             $request->validate([
-            'id_hama' => 'required',
-            'id_gejala' => 'required',
+            'hama_id' => 'required',
+            'gejala_id' => 'required',
             'mb' => 'required',
             'md' => 'required'
             ]);
 
             PengetahuanHama::create([
-            'id_hama' => $request->id_hama,
-            'id_gejala' => $request->id_gejala,
+            'hama_id' => $request->hama_id,
+            'gejala_id' => $request->gejala_id,
             'mb' => $request->mb,
             'md' => $request->md
             ]);
@@ -40,15 +40,15 @@ class PengetahuanHamaContoller extends Controller
       public function update(Request $request)
       {
             $request->validate([
-            'id_hama' => 'required',
-            'id_gejala' => 'required',
+            'hama_id' => 'required',
+            'gejala_id' => 'required',
             'mb' => 'required',
             'md' => 'required'
             ]);
 
             PengetahuanHama::where('id', $request->id)->update([
-            'id_hama' => $request->id_hama,
-            'id_gejala' => $request->id_gejala,
+            'hama_id' => $request->hama_id,
+            'gejala_id' => $request->gejala_id,
             'mb' => $request->mb,
             'md' => $request->md
             ]);

@@ -71,12 +71,12 @@ export default function HamaTable(props) {
                                         </td>
                                         <td className="px-6 py-4 whitespace-nowrap">
                                             <div className="text-sm text-gray-900">
-                                                {hama.det_hama}
+                                                {hama.det_hama.substr(1, 30)}...
                                             </div>
                                         </td>
                                         <td className="px-6 py-4 whitespace-nowrap">
                                             <div className="text-sm text-gray-900">
-                                                {hama.srn_hama}
+                                                {hama.srn_hama.substr(1, 30)}...
                                             </div>
                                         </td>
                                         <td className="px-6 py-4 whitespace-nowrap">

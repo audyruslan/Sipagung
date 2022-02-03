@@ -14,7 +14,7 @@ export default function Pengetahuan(props) {
     const GejalasData = props.gejala.data;
 
     return (
-        <Admin judul="Pengetahuan">
+        <Admin judul="Pengetahuan Penyakit">
             <PengetahuanForm 
                 penyakitsData={PenyakitsData} 
                 gejalasData={GejalasData} />

@@ -30,8 +30,8 @@ export default function Navbar(props) {
                         About
                     </button>
                 </Link>
-                <Link href="/login">
-                    <button
+                <Link href="/login" target="_blank">
+                    <a
                         className={`${
                             props.title == "Login"
                                 ? "text-blue-500"
@@ -39,7 +39,7 @@ export default function Navbar(props) {
                         } hover:text-blue-500 hover:bg-white border border-blue-500 transition-all duration-300 bg-blue-500 px-5 py-2 rounded-lg`}
                     >
                         Login
-                    </button>
+                    </a>
                 </Link>
             </div>
         </div>

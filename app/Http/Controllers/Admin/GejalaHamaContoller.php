@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class GejalaHamaContoller extends Controller
 {
-         public function index()
+      public function index()
       {
       return inertia('Admin/GejalaHama', [
       'gejalahama' => GejalaHama::paginate(10),

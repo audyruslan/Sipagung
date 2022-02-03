@@ -13,7 +13,7 @@ export default function HamaForm() {
         nama_hama: "",
         det_hama: "",
         srn_hama: "",
-        gambar: "",
+        gambar: "", 
     });
 
     const [error, setError] = useState();

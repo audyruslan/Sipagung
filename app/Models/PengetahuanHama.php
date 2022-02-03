@@ -9,4 +9,5 @@ class PengetahuanHama extends Model
 {
     use HasFactory;
 
+      protected $guarded = [];
 }

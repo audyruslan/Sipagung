@@ -12,7 +12,7 @@ export default function Gejalas(props) {
     const GejalasData = props.gejala.data; 
 
     return (
-        <Admin judul="Gejala">
+        <Admin judul="Gejala Penyakit">
             <GejalaForm />
             <div className="p-4 space-y-3">
                 <button
